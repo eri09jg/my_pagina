@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+body {
+    font-family: 'Poppins',sans-serif;
+}
+.header{
+    background-color: #df5505;
+    height: 80px;
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    
+    max-width: 992px;
+    margin:0 auto;        
+}
+.nav-link{
+    color:white;
+    text-decoration: none;
+
+}
+.nav-menu{
+    display:flex;
+    margin-right: 40px;
+    list-style: none;
+
+}
+.nav-menu-item{
+    font-size: 18px;
+    margin:0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width:max-content;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    color:white;
+}
+
+
+.nav-menu-link:hover,
+.nav-menu-link_active{
+    background-color: #ddaa1f;
+    transition: o.5s;
+    
+}
+
+.nav-toggle{
+    color:white;
+    background: none;
+    border:none;
+    font-size: 30px;
+    padding:0 20px;
+    line-height: 60px;
+    
+    display: none;
+}
+@media(max-width:768px) {
+    body{
+        padding-top:70px;
+    }
+    .header{
+        height: 60px;
+    }
+    
+    .nav-menu{
+        flex-direction: column;
+        margin-right: 20px;
+        background-color: #c59971;
+        position: fixed;
+        left:0;
+        top:60px;
+        width:100%;
+        padding:20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left:100%;
+        transition: left 0,3s;
+    }
+    .nav-menu-item{
+        line-height: 70px;
+    }
+        
+    
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        background: none;
+        color:rgb(211, 211, 223);
+        
+    }
+    .nav-toggle{
+        display: block;   
+    }
+    .nav-menu_visible{
+        left:center;
+    }
+}
+
+.logo img {
+    height: 60px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+a {
+    text-decoration: none;
+}
+
+
+.big-cont {
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+     url(/imagenes/perrito.jpg);
+     background-position: center center;
+     background-size: cover;
+}
+.medium-cont {
+    height: calc(100vh - 3rem);
+    align-content: center;
+}
+.small-cont {
+    text-align: center;
+}
+.title {
+    font-size: 4.25rem;
+    color: #fbaf32;
+    margin-bottom: .5rem;
+}
+.subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+.fila-1{
+    display: flex;
+    gap:10px;
+    margin-bottom: 15px;
+}
+.card{
+    background-color: #f1b91e;
+    padding: 20px;
+    text-align: center;
+    flex:1;
+}
+.fila-2{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.card2{
+    background-color: #e4cc89;
+    padding: 20px;
+    text-align: center;
+    flex:1;
+}
+.lista{
+    background: url(iconos/huella.ico) no-repeat left center;
+    background-size: 18px;
+    padding-left: 16px;
+    margin-bottom:16px;
+
+}
+footer{
+    background-color:gray;
+    text-decoration: solid;
+    text-align: center;
+    padding: 50px;
+}
+.Menus ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los items se envuelvan */
+}
+
+.Menus li {
+    margin-left: 1rem;
+}
+
+.Menus a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.Menus a:hover {
+    color: #0056b3;
+}
+
+.big-cont {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/imagenes/perrito.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh; /* Asegurar que ocupe toda la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.medium-cont {
+    text-align: center; /* Centrar el texto */
+}
+
+.small-cont {
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem; /* Reducir el tamaño del título para pantallas pequeñas */
+    color: #fbaf32;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem; /* Reducir el tamaño del subtítulo */
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.fila-1, .fila-2 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los cards se envuelvan */
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card, .card2 {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px; /* Ancho mínimo de 300px */
+    text-align: center;
+}
+
+.lista {
+    background: url(/iconos/huella.ico) no-repeat left center;
+    background-size: 18px;
+    padding-left: 24px;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: gray;
+    text-align: center;
+    padding: 1rem;
+}
+@media(max-width:768px) {
+    .nav-menu_visible {
+        left: 0; /* Muestra el menú */
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: column; /* Alinea los elementos verticalmente */
+        justify-content: center; /* Centra los enlaces verticalmente */
+        align-items: center; /* Centra los enlaces horizontalmente */
+        height: 100%; /* Asegura que ocupe toda la altura */
+    }
+    .nav-menu_visible,.nav-menu-link{
+        color:white;
+    }
+}
