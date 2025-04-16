@@ -206,7 +206,7 @@ footer{
 }
 
 .big-cont {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/imagenes/perrito.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(imagenes/perrito.jpg);
     background-position: center center;
     background-size: cover;
     min-height: 100vh; /* Asegurar que ocupe toda la altura de la pantalla */
@@ -252,7 +252,7 @@ footer{
 }
 
 .lista {
-    background: url(/iconos/huella.ico) no-repeat left center;
+    background: url(iconos/huella.ico) no-repeat left center;
     background-size: 18px;
     padding-left: 24px;
     margin-bottom: 0.5rem;
