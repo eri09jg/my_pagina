@@ -1,138 +1,114 @@
 
-*{
-    margin:0;
+* {
+    margin: 0;
     box-sizing: border-box;
-    font-family:sans-serif;
+    font-family: sans-serif;
 }
 body {
     font-family: sans-serif;
 }
-.header{
+.header {
     background-color: #df5505;
     height: 80px;
     position: fixed;
-    width:100%;
-    top:0;
-    left:0;
-
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
-
     max-width: 992px;
-    margin:0 auto;        
+    margin: 0 auto;
 }
-.nav-link{
-    color:white;
+.nav-link {
+    color: white;
     text-decoration: none;
-
 }
-.nav-menu{
-    display:flex;
+.nav-menu {
+    display: flex;
     margin-right: 40px;
     list-style: none;
-
 }
-.nav-menu-item{
+.nav-menu-item {
     font-size: 18px;
-    margin:0 10px;
+    margin: 0 10px;
     line-height: 80px;
     text-transform: uppercase;
-    width:max-content;
+    width: max-content;
 }
-
-.nav-menu-link{
+.nav-menu-link {
     padding: 8px 12px;
     border-radius: 3px;
-    color:white;
+    color: white;
 }
-
-
 .nav-menu-link:hover,
-.nav-menu-link_active{
+.nav-menu-link_active {
     background-color: #ddaa1f;
-    transition: o.5s;
-    
+    transition: 0.5s;
 }
-
-.nav-toggle{
-    color:white;
+.nav-toggle {
+    color: white;
     background: none;
-    border:none;
+    border: none;
     font-size: 30px;
-    padding:0 20px;
+    padding: 0 20px;
     line-height: 60px;
-    
     display: none;
 }
-@media(max-width:768px) {
-    body{
-        padding-top:70px;
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
     }
-    .header{
+    .header {
         height: 60px;
     }
-    
-    .nav-menu{
+    .nav-menu {
         flex-direction: column;
         margin-right: 20px;
         background-color: #c59971;
         position: fixed;
-        left:0;
-        top:60px;
-        width:100%;
-        padding:20px 0;
-
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
         height: calc(100% - 60px);
         overflow-y: auto;
-        left:100%;
-        transition: left 0,3s;
+        left: 100%;
+        transition: left 0.3s;
     }
-    .nav-menu-item{
+    .nav-menu-item {
         line-height: 70px;
     }
-        
-    
     .nav-menu-link:hover,
     .nav-menu-link_active {
         background: none;
-        color:rgb(211, 211, 223);
-        
+        color: rgb(211, 211, 223);
     }
-    .nav-toggle{
-        display: block;   
+    .nav-toggle {
+        display: block;
     }
-    .nav-menu_visible{
-        left:center;
+    .nav-menu_visible {
+        left: 0;
+    }
+    .home .title {
+        display: none;
     }
 }
-
-
-h1,h2,h3,p,ul {
-    margin: 0;
-}
-
-
 
 .logo img {
     height: 60px;
 }
-
-
 img {
     max-width: 100%;
-    height:auto;
+    height: auto;
 }
 a {
     text-decoration: none;
 }
-
 .section {
-    padding: 2rem 0 2rem;
+    padding: 2rem 0;
 }
-
 .section-title, .section-subtitle {
     text-align: center;
 }
@@ -151,33 +127,18 @@ a {
 .tk-container {
     max-width: 960px;
     width: calc(100% - 2rem);
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 auto;
 }
 .tk-grid {
     display: grid;
     gap: 1.5rem;
 }
-.l-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: #fbfefd;
-}
-/*/*/
-
-
-/*/*/
-
 .home {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
-     url(imagenes/carrusel2.jpg);
-     background-position: center center;
-     background-size: cover;
-     display: flex;
-     justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(imagenes/carrusel2.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 .home_container {
     height: calc(100vh - 3rem);
@@ -186,7 +147,6 @@ a {
 .home_data {
     text-align: center;
 }
-/*/*/
 .home_title {
     font-size: 4.25rem;
     color: #fbaf32;
@@ -197,8 +157,7 @@ a {
     color: #fff;
     margin-bottom: 2rem;
 }
-
-.button{
+.button {
     display: inline-block;
     background-color: #fbaf32;
     color: #fff;
@@ -209,7 +168,6 @@ a {
 .button:hover {
     background-color: #e78e00;
 }
-
 .about_data {
     text-align: center;
     justify-content: center;
@@ -222,12 +180,10 @@ a {
     border-radius: .5rem;
     justify-self: center;
 }
-
-.services_container{
+.services_container {
     row-gap: 2.5rem;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
-
 .services_content {
     text-align: center;
 }
@@ -245,13 +201,11 @@ a {
 .service_description {
     padding: 0 1.5rem;
 }
-
 .menu_container {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
 }
-
-.menu_content{
+.menu_content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -261,13 +215,12 @@ a {
     padding: .75rem;
     justify-content: center;
 }
-.menu_img{
+.menu_img {
     width: 100px;
     align-self: center;
     margin-bottom: 1rem;
 }
-
-.menu_name, .menu_preci{
+.menu_name, .menu_preci {
     font-weight: 600;
     color: #393939;
 }
@@ -280,10 +233,9 @@ a {
 .menu_detail {
     margin-bottom: .5rem;
 }
-.menu_preci{
+.menu_preci {
     padding-bottom: 30px;
 }
-
 .menu_button {
     position: absolute;
     bottom: 0;
@@ -291,29 +243,11 @@ a {
     display: flex;
     padding: 10px 97px;
 }
-footer{
-    background-color:gray;
-    text-decoration: solid;
+footer {
+    background-color: gray;
     text-align: center;
     padding: 50px;
 }
-
-@media(max-width:768px) {
-    .nav-menu_visible {
-        left: 0; /* Muestra el menú */
-    }
-    .nav-menu {
-        display: flex;
-        flex-direction: column; /* Alinea los elementos verticalmente */
-        justify-content: center; /* Centra los enlaces verticalmente */
-        align-items: center; /* Centra los enlaces horizontalmente */
-        height: 100%; /* Asegura que ocupe toda la altura */
-    }
-    .nav-menu_visible,.nav-menu-link{
-        color:white;
-    }
-}
-/**/
 body.menu-abierto {
     overflow: hidden;
 }
