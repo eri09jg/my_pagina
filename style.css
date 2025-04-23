@@ -1,12 +1,20 @@
+/* CSS CORREGIDO */
 
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+body.menu-abierto {
+    overflow: hidden;
+}
+
 body {
     font-family: sans-serif;
 }
+
 .header {
     background-color: #df5505;
     height: 80px;
@@ -14,40 +22,49 @@ body {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 992px;
     margin: 0 auto;
+    height: 100%;
 }
-.nav-link {
-    color: white;
-    text-decoration: none;
+
+.logo img {
+    height: 60px;
 }
+
 .nav-menu {
     display: flex;
     margin-right: 40px;
     list-style: none;
+    align-items: center;
 }
+
 .nav-menu-item {
     font-size: 18px;
     margin: 0 10px;
     line-height: 80px;
     text-transform: uppercase;
-    width: max-content;
 }
+
 .nav-menu-link {
     padding: 8px 12px;
     border-radius: 3px;
     color: white;
+    text-decoration: none;
 }
+
 .nav-menu-link:hover,
 .nav-menu-link_active {
     background-color: #ddaa1f;
     transition: 0.5s;
 }
+
 .nav-toggle {
     color: white;
     background: none;
@@ -57,6 +74,7 @@ body {
     line-height: 60px;
     display: none;
 }
+
 @media (max-width: 768px) {
     body {
         padding-top: 70px;
@@ -70,53 +88,41 @@ body {
         background-color: #c59971;
         position: fixed;
         top: 60px;
-        width: 100%;
-        padding: 20px 0;
-        height: calc(100% - 60px);
-        overflow-y: auto;
         left: 100%;
+        width: 100%;
+        height: calc(100% - 60px);
+        padding: 20px 0;
+        overflow-y: auto;
         transition: left 0.3s;
     }
-    .nav-menu-item {
-        line-height: 70px;
+    .nav-menu_visible {
+        left: 0;
+    }
+    .nav-toggle {
+        display: block;
     }
     .nav-menu-link:hover,
     .nav-menu-link_active {
         background: none;
         color: rgb(211, 211, 223);
     }
-    .nav-toggle {
-        display: block;
-    }
-    .nav-menu_visible {
-        left: 0;
-    }
-    .home .title {
-        display: none;
-    }
 }
 
-.logo img {
-    height: 60px;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-a {
-    text-decoration: none;
-}
 .section {
     padding: 2rem 0;
 }
-.section-title, .section-subtitle {
+
+.section-title,
+.section-subtitle {
     text-align: center;
 }
+
 .section-title {
     font-size: 2.5rem;
     color: #393939;
     margin-bottom: 1.5rem;
 }
+
 .section-subtitle {
     font-size: 1.5rem;
     display: block;
@@ -124,39 +130,52 @@ a {
     font-weight: 500;
     margin-bottom: .5rem;
 }
+
 .tk-container {
-    max-width: 960px;
-    width: calc(100% - 2rem);
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
 }
+
 .tk-grid {
     display: grid;
     gap: 1.5rem;
 }
+
 .home {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(imagenes/carrusel2.jpg);
-    background-position: center center;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(imagenes/carrusel2.jpg);
+    background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
 }
+
 .home_container {
-    height: calc(100vh - 3rem);
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
+
 .home_data {
     text-align: center;
 }
+
 .home_title {
     font-size: 4.25rem;
     color: #fbaf32;
     margin-bottom: .5rem;
 }
+
 .home_subtitle {
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 2rem;
 }
+
 .button {
     display: inline-block;
     background-color: #fbaf32;
@@ -165,89 +184,101 @@ a {
     border-radius: .5rem;
     transition: .3s;
 }
+
 .button:hover {
     background-color: #e78e00;
 }
+
 .about_data {
     text-align: center;
-    justify-content: center;
 }
+
 .about_description {
     margin-bottom: 1.5rem;
 }
+
 .about_img {
     width: 280px;
     border-radius: .5rem;
-    justify-self: center;
+    margin: 0 auto;
 }
-.services_container {
-    row-gap: 2.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-.services_content {
-    text-align: center;
-}
-.services_img {
-    width: 64px;
-    height: 64px;
-    fill: #fbaf32;
-    margin-bottom: 1rem;
-}
-.services_title {
-    font-size: 1rem;
-    color: #393939;
-    margin-bottom: .5rem;
-}
-.service_description {
-    padding: 0 1.5rem;
-}
+
 .menu_container {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     justify-content: center;
+    align-items: stretch;
 }
+
 .menu_content {
-    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: .5rem;
     box-shadow: 0 2px 4px rgba(3, 74, 40, .15);
-    padding: .75rem;
-    justify-content: center;
+    padding: 1rem;
+    position: relative;
 }
+
 .menu_img {
     width: 100px;
     align-self: center;
     margin-bottom: 1rem;
 }
-.menu_name, .menu_preci {
+
+.menu_name,
+.menu_preci {
     font-weight: 600;
     color: #393939;
 }
+
 .menu_name {
-    font-size: .938rem;
+    font-size: 1rem;
 }
-.menu_detail, .menu_preci {
-    font-size: .813rem;
-}
-.menu_detail {
+
+.menu_detail,
+.menu_preci {
+    font-size: .9rem;
     margin-bottom: .5rem;
 }
-.menu_preci {
-    padding-bottom: 30px;
-}
+
 .menu_button {
     position: absolute;
     bottom: 0;
     right: 0;
     display: flex;
-    padding: 10px 97px;
+    padding: 10px;
+    background-color: #fbaf32;
+    border-radius: 0 .5rem .5rem 0;
 }
+
+.services_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.services_content {
+    text-align: center;
+}
+
+.services_img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.services_title {
+    font-size: 1.2rem;
+    color: #393939;
+    margin-bottom: .5rem;
+}
+
 footer {
     background-color: gray;
     text-align: center;
     padding: 50px;
-}
-body.menu-abierto {
-    overflow: hidden;
+    color: white;
 }
