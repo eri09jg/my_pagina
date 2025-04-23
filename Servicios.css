@@ -1,3 +1,171 @@
+n la parte de la sección naranja no debe de aparecer eso solo el color dijo sin que
+aparezcan los textos al bajar
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veterinaria Mascotas Radiantes</title>
+<link rel="stylesheet" href="Servicios.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script defer src="Servicios.js"></script>
+</head>
+<body>
+<header class="header">
+<nav class="nav">
+<div class="logo">
+<img src="imagenes/logo.jpg" alt="logo" id="logo">
+</div>
+<button class="nav-toggle" id="nav-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<ul class="nav-menu ">
+<li class="nav-menu-item"><a href="index.html"
+class="nav-menu-link">Inicio</a></li>
+<li class="nav-menu-item"><a href="Programas.html"
+class="nav-menu-link">Programas</a></li>
+<li class="nav-menu-item"><a href="Recompensas.html"
+class="nav-menu-link">Recompensas</a></li>
+<li class="nav-menu-item"><a href="Servicios.html" class="nav-menu-link
+nav-menu-link_active">Servicios</a></li>
+</ul>
+</nav>
+</header>
+<section class="home">
+<div class="house">
+<div class="my_home">
+<h1 class="title">Conoce nuestros precios y servicios <br>en esta seccion</h1>
+</div>
+</div>
+</section>
+<div class="container">
+<h1 class="section-title">Servicios, productos y costos</h1>
+<table class="bordered-table">
+<tr>
+<th>Producto</th>
+<th>Precio</th>
+</tr>
+<tr>
+<td>Jaula chica</td>
+<td>$120</td>
+</tr>
+<tr>
+<td>Jaula mediana</td>
+<td>$150</td>
+</tr>
+<tr>
+<td>Jaula grande</td>
+<td>$200</td>
+</tr>
+<tr>
+<td>Cama chica</td>
+<td>$199</td>
+</tr>
+<tr>
+<td>Cama mediana</td>
+<td>$279</td>
+</tr>
+<tr>
+<td>Cama grande</td>
+<td>$325</td>
+</tr>
+<tr>
+<td>Correa para perros</td>
+<td>$55</td>
+</tr>
+<tr>
+<td>Paquete de huesos para perro</td>
+<td>$99</td>
+</tr>
+<tr>
+<td>Shampoo antipulgas para perros y gatos 350 mililitros</td>
+<td>$120</td>
+</tr>
+<tr>
+<td>Shampoo para conejo 350ml</td>
+<td>$180</td>
+</tr>
+<tr>
+<td>Alimento para aves</td>
+<td>$180</td>
+</tr>
+<tr>
+<td>Croquetas por kilo</td>
+<td>$15</td>
+</tr>
+<tr>
+<td>Croquetas empaquetadas</td>
+<td>$99</td>
+</tr>
+<tr>
+<td>Alimento para peces</td>
+<td>$77</td>
+</tr>
+</table>
+<p>En la siguiente tabla se muestran los precios según el tamaño del canino.</p>
+<table class="bordered-table">
+<tr>
+<th>Tamaño</th>
+<th>Baño</th>
+<th>Estética</th>
+</tr>
+<tr>
+<td>Cachorros</td>
+<td>$150</td>
+<td>$200</td>
+</tr>
+<tr>
+<td>Chica</td>
+<td>$150</td>
+<td>$200</td>
+</tr>
+<tr>
+<td>Mediana</td>
+<td>$250</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>Grande</td>
+<td>$350</td>
+<td>$400</td>
+</tr>
+<tr>
+<td>Talla XG</td>
+<td>$450</td>
+<td>$550</td>
+</tr>
+</table>
+<p>La parte estética incluye: </p>
+<ul>
+<li>Baño con shampoo especializado</li>
+<li>Secado y cepillado</li>
+<li>Limpieza de oídos</li>
+<li>Corte de uñas</li>
+</ul>
+<h4 class="section-title">Corte y estilismo</h4>
+<ul>
+<li>Corte de pelo con máquina o tijera</li>
+<li>Deslanado y eliminación de nudos</li>
+</ul>
+<h4 class="section-title">Cuidado Especial</h4>
+<ul>
+<li>Tratamiento para piel sensible o dermatitis</li>
+<li>Baños medicados o antipulgas</li>
+</ul>
+<h4 class="section-title">Extras</h4>
+<ul>
+<li>Aplicación de perfumes y accesorios (moños, pañoleras)</li>
+<li>Cepillado dental</li>
+<li>Tintes o decoraciones temporales</li>
+</ul>
+</div>
+<footer>
+<p>@Mascotas Radiantes.Todos los derechos reservados</p>
+</footer>
+</body>
+</html>
+Css
 @import
 url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 *{
@@ -254,34 +422,11 @@ height: 100%; /* Asegura que ocupe toda la altura */
 color:white;
 }
 }
-
-
-
-
-@media(max-width:768px) {
-  .nav-menu {
-    flex-direction: column;
-    margin-right: 20px;
-    background-color: #c59971;
-    position: fixed;
-    left: 0;
-    top: 60px;
-    width: 100%;
-    padding: 20px 0;
-    height: calc(100% - 60px);
-    overflow-y: auto;
-    left: 100%;
-    transition: left 0.3s;
-    z-index: 1000; /* Asegura que esté por encima del contenido */
-  }
-
-  .nav-menu_visible {
-    left: 0; /* Asegura que se muestre correctamente */
-    background-color: #c59971; /* Color sólido */
-    opacity: 1; /* Asegura que sea completamente opaco */
-  }
-
-  .nav-menu-link {
-    color: white;
-  }
-}
+Js
+document.addEventListener("DOMContentLoaded", function() {
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
+navToggle.addEventListener("click", function() {
+navMenu.classList.toggle("nav-menu_visible");
+});
+});
