@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const isVisible = navMenu.classList.toggle("nav-menu_visible");
 
         if (isVisible) {
-            document.body.classList.add("no-scroll");
+            document.body.classList.add("menu-abierto");
         } else {
-            document.body.classList.remove("no-scroll");
+            document.body.classList.remove("menu-abierto");
         }
     });
 });
